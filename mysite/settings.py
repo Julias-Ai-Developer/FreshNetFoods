@@ -76,13 +76,13 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'woo_commerce_site',
-        'USER': 'root',
-        'PASSWORD': 'ceo@2005', # <--- This is the likely issue
-        'HOST': 'localhost',
-        'PORT': '3306', # <--- This is set to 3306
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "fresh_net_foods",
+        "USER": "root",
+        "PASSWORD": "ceo@2005",  # <--- This is the likely issue
+        "HOST": "localhost",
+        "PORT": "3306",  # <--- This is set to 3306
     }
 }
 
@@ -108,13 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en-us"  # Keep English (US), or change to "en-gb" for UK-style spelling
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Kampala"  # Set Uganda's time zone
 
-USE_I18N = True
+USE_I18N = True  # Enable internationalization
 
-USE_TZ = True
+USE_TZ = True  # Use timezone-aware datetimes
 
 
 # Static files (CSS, JavaScript, Images)
