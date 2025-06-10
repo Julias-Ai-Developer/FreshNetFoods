@@ -1,0 +1,182 @@
+{% load static%}
+
+
+{% include 'components/header.html'%}
+{% include 'components/hero.html'%}
+
+      <!-- Breadcrumb area start  -->
+
+    <!-- register-area start -->
+<!-- signup-area start -->
+<section class="checkout-area section-space">
+ <div class="container">
+  <form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <div class="row">
+    
+      <!-- Left Column: Form Fields -->
+      <div class="col-lg-6">
+        <div class="checkbox-form">
+          <h3 class="mb-15">Create Your Account</h3>
+          <div class="row g-5">
+
+            <!-- First Name -->
+            <div class="col-md-6">
+              <div class="checkout-form-list">
+                <label>First Name <span class="required">*</span></label>
+                <input type="text" name="first_name" placeholder="Enter your first name" required>
+              </div>
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-md-6">
+              <div class="checkout-form-list">
+                <label>Last Name <span class="required">*</span></label>
+                <input type="text" name="last_name" placeholder="Enter your last name" required>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-12">
+              <div class="checkout-form-list">
+                <label>Email Address <span class="required">*</span></label>
+                <input type="email" name="email" placeholder="Enter your email address" required>
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-md-12">
+              <div class="checkout-form-list">
+                <label>Phone Number <span class="required">*</span></label>
+                <input type="text" name="phone_number" placeholder="Enter your phone number" required>
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="col-md-6">
+              <div class="checkout-form-list">
+                <label>Password <span class="required">*</span></label>
+                <input type="password" name="password" placeholder="Create a password" required>
+              </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="col-md-6">
+              <div class="checkout-form-list">
+                <label>Confirm Password <span class="required">*</span></label>
+                <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+              </div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="col-md-12">
+              <div class="checkout-form-list create-acc d-flex align-content-center">
+                <input class="e-check-input" id="terms" type="checkbox" required>
+                <label class="mb-0" for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+              </div>
+            </div>
+
+            <!-- Newsletter Checkbox -->
+            <div class="col-md-12">
+              <div class="checkout-form-list create-acc d-flex align-content-center">
+                <input class="e-check-input" id="newsletter" type="checkbox" name="subscribe_newsletter">
+                <label class="mb-0" for="newsletter">Subscribe to our newsletter</label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-md-12">
+              <div class="order-button-payment">
+                <button class="fill-btn" type="submit">
+                  <span class="fill-btn-inner">
+                    <span class="fill-btn-normal">Create Account</span>
+                    <span class="fill-btn-hover">Create Account</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Already have account -->
+            <div class="col-md-12">
+              <div class="checkout-form-list">
+                <p class="mb-0">
+                  Already have an account? <a href="#">Login here</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Info Sidebar -->
+      <div class="col-lg-6">
+        <div class="your-order">
+          <h3>Join Our Community</h3>
+          <div class="your-order-table table-responsive">
+            <div class="login-image-container">
+              <img src="https://via.placeholder.com/500x400/e3f2fd/1976d2?text=Welcome+to+Our+Community" alt="Signup Image" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+          </div>
+          <div class="payment-method mt-4">
+            <div class="accordion" id="signupAccordion">
+              <!-- Member Benefits -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="benefitsOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#benefits" aria-expanded="true" aria-controls="benefits">
+                    Member Benefits
+                  </button>
+                </h2>
+                <div id="benefits" class="accordion-collapse collapse show" aria-labelledby="benefitsOne" data-bs-parent="#signupAccordion">
+                  <div class="accordion-body">
+                    Enjoy exclusive discounts, early access to sales, personalized recommendations, and priority customer support.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Privacy Protection -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="privacyTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#privacy" aria-expanded="false" aria-controls="privacy">
+                    Privacy Protection
+                  </button>
+                </h2>
+                <div id="privacy" class="accordion-collapse collapse" aria-labelledby="privacyTwo" data-bs-parent="#signupAccordion">
+                  <div class="accordion-body">
+                    We respect your privacy and will never share your personal information with third parties without your consent.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Community Features -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="communityThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#community" aria-expanded="false" aria-controls="community">
+                    Community Features
+                  </button>
+                </h2>
+                <div id="community" class="accordion-collapse collapse" aria-labelledby="communityThree" data-bs-parent="#signupAccordion">
+                  <div class="accordion-body">
+                    Connect with other members, share reviews, participate in discussions, and get product recommendations.
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- end accordion -->
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end row -->
+  </form>
+</div>
+
+</section>
+<!-- signup-area end -->
+<!-- register-area end -->
+   </main>
+   <!-- Body main wrapper end -->
+ {% include 'components/footer.html'%}
