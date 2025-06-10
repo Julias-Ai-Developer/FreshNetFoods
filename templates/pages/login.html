@@ -1,0 +1,127 @@
+{% load static%}
+
+
+{% include 'components/header.html'%}
+{% include 'components/hero.html'%}
+
+      <!-- Breadcrumb area start  -->
+
+    <!-- login-area start -->
+<section class="checkout-area section-space">
+   <div class="container">
+      <form action="{% url 'login'%}">
+         {% csrf_token %}
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="checkbox-form">
+                  <h3 class="mb-15">Login to Your Account</h3>
+                  <div class="row g-5">
+                     <div class="col-md-12">
+                        <div class="checkout-form-list">
+                           <label>Email Address <span class="required">*</span></label>
+                           <input type="email" name="email" placeholder="Enter your email address">
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="checkout-form-list">
+                           <label>Password <span class="required">*</span></label>
+                           <input type="password" name="password" placeholder="Enter your password">
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="checkout-form-list create-acc d-flex align-content-center">
+                           <input class="e-check-input" id="remember" type="checkbox">
+                           <label class="mb-0">Remember me</label>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="order-button-payment">
+                           <button class="fill-btn" type="submit">
+                              <span class="fill-btn-inner">
+                                 <span class="fill-btn-normal">Login</span>
+                                 <span class="fill-btn-hover">Login</span>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="checkout-form-list">
+                           <p class="mb-0">
+                              <a href="{% url 'forgotpassword'%}">Forgot your password?</a>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="checkout-form-list">
+                           <p class="mb-0">
+                              Don't have an account? <a href="{% url 'register'%}">Sign up here</a>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="your-order">
+                  <h3>Welcome Back</h3>
+                  <div class="your-order-table table-responsive">
+                     <div class="login-image-container">
+                        <img src="https://via.placeholder.com/500x400/f8f9fa/6c757d?text=Login+Image" alt="Login Image" style="width: 100%; height: auto; border-radius: 8px;">
+                     </div>
+                  </div>
+                  <div class="payment-method">
+                     <div class="accordion" id="loginAccordion">
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="featuresOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#features" aria-expanded="true" aria-controls="features">
+                                 Why Login?
+                              </button>
+                           </h2>
+                           <div id="features" class="accordion-collapse collapse show"
+                              aria-labelledby="featuresOne" data-bs-parent="#loginAccordion">
+                              <div class="accordion-body">
+                                 Access your personalized dashboard, track orders, save preferences, and enjoy a seamless shopping experience.
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="securityTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#security" aria-expanded="false" aria-controls="security">
+                                 Secure & Safe
+                              </button>
+                           </h2>
+                           <div id="security" class="accordion-collapse collapse" aria-labelledby="securityTwo"
+                              data-bs-parent="#loginAccordion">
+                              <div class="accordion-body">
+                                 Your data is protected with industry-standard encryption and security measures.
+                              </div>
+                           </div>
+                        </div>
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="supportThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#support" aria-expanded="false" aria-controls="support">
+                                 24/7 Support
+                              </button>
+                           </h2>
+                           <div id="support" class="accordion-collapse collapse" aria-labelledby="supportThree"
+                              data-bs-parent="#loginAccordion">
+                              <div class="accordion-body">
+                                 Our support team is available around the clock to help you with any questions or issues.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</section>
+<!-- login-area end -->
+   </main>
+   <!-- Body main wrapper end -->
+ {% include 'components/footer.html'%}
